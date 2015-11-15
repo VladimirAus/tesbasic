@@ -1,4 +1,4 @@
-name: Standard
+name: TesBasic
 type: profile
 description: 'Install with commonly used features pre-configured.'
 # version: VERSION
@@ -19,7 +19,6 @@ dependencies:
   - block_content
   - quickedit
   - editor
-  - help
   - image
   - menu_ui
   - options
@@ -36,14 +35,11 @@ dependencies:
   - rdf
   - views
   - views_ui
-  - tour
   - automated_cron
 themes:
-  - bartik
+  - bs4bartik
   - seven
 
 # Information added by Drupal.org packaging script on 2015-11-13
 version: '8.0.0-rc4'
 core: '8.x'
-project: 'drupal'
-datestamp: 1447414998

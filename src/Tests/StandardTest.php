@@ -2,10 +2,10 @@
 
 /**
  * @file
- * Contains \Drupal\standard\Tests\StandardTest.
+ * Contains \Drupal\tesbasic\Tests\StandardTest.
  */
 
-namespace Drupal\standard\Tests;
+namespace Drupal\tesbasic\Tests;
 
 use Drupal\config\Tests\SchemaCheckTestTrait;
 use Drupal\contact\Entity\ContactForm;
@@ -18,13 +18,13 @@ use Drupal\user\Entity\Role;
 /**
  * Tests Standard installation profile expectations.
  *
- * @group standard
+ * @group tesbasic
  */
 class StandardTest extends WebTestBase {
 
   use SchemaCheckTestTrait;
 
-  protected $profile = 'standard';
+  protected $profile = 'tesbasic';
 
   /**
    * The admin user.
@@ -111,7 +111,7 @@ class StandardTest extends WebTestBase {
 
     // Now we have all configuration imported, test all of them for schema
     // conformance. Ensures all imported default configuration is valid when
-    // standard profile modules are enabled.
+    // tesbasic profile modules are enabled.
     $names = $this->container->get('config.storage')->listAll();
     /** @var \Drupal\Core\Config\TypedConfigManagerInterface $typed_config */
     $typed_config = $this->container->get('config.typed');

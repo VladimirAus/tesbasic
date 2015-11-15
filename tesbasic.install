@@ -15,6 +15,8 @@ use Drupal\user\RoleInterface;
  * @see system_install()
  */
 function tesbasic_install() {
+  // Set site name.
+  \Drupal::configFactory()->getEditable('system.site')->set('name', 'New site')->save(TRUE);
   // Set front page to "node".
   \Drupal::configFactory()->getEditable('system.site')->set('page.front', '/node')->save(TRUE);
 
